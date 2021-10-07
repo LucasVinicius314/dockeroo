@@ -4,6 +4,7 @@ WORKDIR /code
 ENV PORT=4001
 COPY package.json package.json
 RUN yarn install
+RUN yarn build
 EXPOSE 4001
 COPY . .
 CMD ["yarn", "start"]
