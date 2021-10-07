@@ -1,11 +1,9 @@
 # syntax=docker/dockerfile:1
-FROM python:3.7-alpine
+FROM node:15
 WORKDIR /code
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
-RUN apk add --no-cache gcc musl-dev linux-headers
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
-EXPOSE 5000
+ENV PORT=4001
+COPY package.json package.json
+RUN yarn install
+EXPOSE 4001
 COPY . .
-CMD ["flask", "run"]
+CMD ["yarn", "start"]

@@ -1,0 +1,14 @@
+{
+  "name": "dockeroo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/LucasVinicius314/dockeroo.git",
+  "author": "Lucas Coelho <58010418+LucasVinicius314@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
